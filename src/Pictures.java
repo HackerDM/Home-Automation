@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Date;
 //import java.util.Date;
 
 public class Pictures {
@@ -13,13 +14,16 @@ public class Pictures {
 	
 	public void capture(){
 		//calls a shell script to capture the image
-		LocalDateTime timePoint = LocalDateTime.now();
-				
-		String date = timePoint.getYear()+"/"+timePoint.getMonthValue()+"/"+timePoint.getDayOfMonth();
-		String time = timePoint.getHour()+"-"+timePoint.getMinute()+"-"+timePoint.getSecond();
-		String dateTime = date + "_" + time;
+//		LocalDateTime timePoint = LocalDateTime.now();
+//				
+//		String date = timePoint.getYear()+"/"+timePoint.getMonthValue()+"/"+timePoint.getDayOfMonth();
+//		String time = timePoint.getHour()+"-"+timePoint.getMinute()+"-"+timePoint.getSecond();
+//		String dateTime = date + "_" + time;
 		
-		picSet = new PicSet("640x640", "webcam/"+dateTime+".jpg");
+		Date dateTime = new Date();
+		System.out.println(dateTime);
+		
+		picSet = new PicSet("1024x768", "webcam/"+dateTime+".jpg");
 		try {
 			Runtime.getRuntime().exec("fswebcam -r " + picSet.getResolution() + " --no-banner " + picSet.getStorageLocation());
 		} catch (IOException e) {
