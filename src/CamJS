@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body> 
+
+<h1>Pi Cam is Watching You!</h1>
+
+<button type="button" onclick= "camFunction()">Take Picture!</button>
+
+<h2>Yeah!! You Should be Scared.</h2>
+<applet id="piCam" archive="Pictures.java" code="Pictures"></applet>
+
+<script>
+function camFunction() {
+	window.alert("Picture Taken!");
+	piCam.capture();
+}
+</script>
+
+</body>
+</html>
