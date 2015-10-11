@@ -1,5 +1,5 @@
 import java.io.IOException;
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 
 
 public class Pictures {
@@ -12,16 +12,18 @@ public class Pictures {
 	
 	public void capture(){
 		//calls a shell script to capture the image
-		LocalDateTime timePoint = LocalDateTime.now();
+//		LocalDateTime timePoint = LocalDateTime.now();
 				
-		String date = timePoint.getYear()+"/"+timePoint.getMonthValue()+"/"+timePoint.getDayOfMonth();
-		String time = timePoint.getHour()+"-"+timePoint.getMinute()+"-"+timePoint.getSecond();
-		String dateTime = date + "_" + time;
+//		String date = timePoint.getYear()+"/"+timePoint.getMonthValue()+"/"+timePoint.getDayOfMonth();
+//		String time = timePoint.getHour()+"-"+timePoint.getMinute()+"-"+timePoint.getSecond();
+//		String dateTime = date + "_" + time;
 		
-		picSet = new PicSet("640x640", "webcam/"+dateTime+".jpg");
+		picSet = new PicSet("640x640", "webcam/image.jpg");
 		try 
 		{
-			Runtime.getRuntime().exec("fswebcam -r " + picSet.getResolution() + " --no-banner " + picSet.getStorageLocation());
+//			Runtime.getRuntime().exec("sudo fswebcam -r " + picSet.getResolution() + " --no-banner " + picSet.getStorageLocation());
+			Runtime.getRuntime().exec("sudo fswebcam -r 640x640 --no-banner webcam/image1.jpg");
+			Runtime.getRuntime().exec("touch hi.txt");
 		} 
 		
 		catch (IOException e) 

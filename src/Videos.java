@@ -14,6 +14,7 @@ public class Videos extends Media
 		
 		try 
 		{
+			Runtime.getRuntime().exec("sudo service motion start");
 			Runtime.getRuntime().exec("sudo motion start");
 		} 
 		
@@ -30,6 +31,7 @@ public class Videos extends Media
 		try 
 		{
 			Runtime.getRuntime().exec("/etc/init.d/motion stop");
+//			Runtime.getRuntime().exec("sudo service motion stop");
 		} 
 		
 		catch (IOException e) 
@@ -38,5 +40,11 @@ public class Videos extends Media
 			e.printStackTrace();
 		}
 		
+	}
+
+	public static void main(String [] args)
+	{
+		Videos v = new Videos();
+		v.shootVideos();
 	}
 }
