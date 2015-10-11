@@ -1,7 +1,7 @@
+import java.io.IOException;
 
 public class Videos extends Media
 {
-	private static int noOfVideosCaptured;
 	private VidSet vidset;
 	
 	public Videos()
@@ -12,10 +12,31 @@ public class Videos extends Media
 	public void shootVideos()
 	{
 		
+		try 
+		{
+			Runtime.getRuntime().exec("sudo motion start");
+		} 
+		
+		catch (IOException e) 
+		{
+			System.out.println("error in capturing the picture bro");
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public void stopShoot()
 	{
+		try 
+		{
+			Runtime.getRuntime().exec("/etc/init.d/motion stop");
+		} 
+		
+		catch (IOException e) 
+		{
+			System.out.println("error in capturing the picture bro");
+			e.printStackTrace();
+		}
 		
 	}
 }

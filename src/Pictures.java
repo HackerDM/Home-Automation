@@ -7,7 +7,6 @@ public class Pictures {
 	private static int noOfPicturesClicked;
 	
 	public Pictures() {
-		// TODO Auto-generated constructor stub
 		noOfPicturesClicked++;
 	}
 	
@@ -20,10 +19,13 @@ public class Pictures {
 		String dateTime = date + "_" + time;
 		
 		picSet = new PicSet("640x640", "webcam/"+dateTime+".jpg");
-		try {
+		try 
+		{
 			Runtime.getRuntime().exec("fswebcam -r " + picSet.getResolution() + " --no-banner " + picSet.getStorageLocation());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} 
+		
+		catch (IOException e) 
+		{
 			System.out.println("error in capturing the picture bro");
 			e.printStackTrace();
 		}
