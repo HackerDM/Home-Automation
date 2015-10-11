@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body> 
+
+<button type="button" onclick= "camFunction1()">Take Picture!</button>
+<button type="button" onclick= "camFunction2()">Start Recording</button>
+<button type="button" onclick= "camFunction3()">Stop Recording</button>
+<button type="button" onclick= "settingFunction()">Settings</button>
+<button type="button" onclick= "media()">Gallery</button>
+
+<applet id="piCam1" archive="Pictures.java" code="Pictures"></applet>
+<applet id="piCam2" archive="Videos.java" code="Videos"></applet>
+<applet id="piCamSetting" archive="Settings.java" code="Settings"></applet>
+<applet id="piMedia" archive="Media.java" code="Media"></applet>
+
+<script>
+function camFunction1() {
+	window.alert("Picture Taken!");
+	piCam1.capture();
+
+function camFunction2() {
+	window.alert("Recording Started!");
+	piCam2.startRecording();
+
+function camFunction3() {
+	window.alert("Recording Stopped!");
+	piCam2.stopRecording();
+
+function settingFunction() {
+	piCamSetting.resolution();
+
+}
+
+function media() {
+	piMedia.capture();
+
+}
+</script>
+
+</body>
+</html>
