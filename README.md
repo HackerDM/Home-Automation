@@ -1,10 +1,10 @@
 # Home-Automation
 How to acess the pi
 open terminal and type the following command
-ssh pi@10.3.3.102 -p 10000
+ssh pi@10.3.1.143 -p 10000
 
 how to see the webpage
-open your browser and type in 10.3.3.102:11000/HomeAutomation/Home-Automation and you get to see the homepage
+open your browser and type in 10.3.1.143:11000/HomeAutomation/Home-Automation and you get to see the homepage
 
 how to access the server files
 ssh into the pi and navigate to /var/www/HomeAutomation/Home-Automation/
