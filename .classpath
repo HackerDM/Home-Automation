@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/Users/dhruvmahajan/Documents/opencv-3.0.0/build/bin/opencv-300.jar">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/Users/dhruvmahajan/Documents/opencv-3.0.0/build/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Rishabh Jain/Downloads/twitter4j-4.0.4.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Rishabh Jain/Downloads/twitter4j-4.0.4/lib/twitter4j-core-4.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rishabh Jain/Downloads/facebook4j-core-2.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
